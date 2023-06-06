@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const textOptions = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
 
@@ -24,15 +25,15 @@ const OptionContainer = styled.li`
  */
 function OptionsHeader() {
     return (
-        <OptionsContainer>
-            {
-                textOptions.map((text) => (
-                    <OptionContainer key={text}>
-                        <p>{text}</p>
-                    </OptionContainer>
-                ))
-            }
-        </OptionsContainer>
+      <OptionsContainer>
+        {textOptions.map((text) => (
+          <Link to={`/${text.toLowerCase().split(" ").join("-")}`}>
+            <OptionContainer key={text}>
+              <p>{text}</p>
+            </OptionContainer>
+          </Link>
+        ))}
+      </OptionsContainer>
     );
 }
 

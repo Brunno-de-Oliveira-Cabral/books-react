@@ -3,9 +3,13 @@ import styled from "styled-components";
 import Input from "../Input/input";
 import { books } from "./testeBrunno";
 import { useState } from "react";
+import img from "../../imgs/BannerBooks.png"
 
 const SearchContainer = styled.section`
   background-image: linear-gradient(90deg, #002f52 35%, #326589 165%);
+  // background-image: url(${img});
+  // background-repeat: no-repeat;
+  // background-size: 1920px 440px;
   color: #fff;
   text-align: center;
   padding: 85px 0;

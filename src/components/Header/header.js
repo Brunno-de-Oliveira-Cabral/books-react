@@ -2,6 +2,7 @@ import styled from "styled-components";
 import IconsHeader from "./IconsHeader/icon";
 import Logo from "./Logo/logo";
 import OptionsHeader from "./OptionsHeader/option";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.header`
     background-color: #FFF;
@@ -15,11 +16,13 @@ const HeaderContainer = styled.header`
  */
 function Header() {
     return (
-        <HeaderContainer>
-            <Logo />
-            <OptionsHeader />
-            <IconsHeader />
-        </HeaderContainer>
+      <HeaderContainer>
+        <Link to = "/">
+          <Logo />
+        </Link>
+        <OptionsHeader />
+        <IconsHeader />
+      </HeaderContainer>
     );
 }
 
